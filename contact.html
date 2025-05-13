@@ -54,10 +54,25 @@
                     <div class="input-box">
                         <input type="text" name="subject" placeholder="Subject" required>
                     </div>
+                      <div class="input-box">
+                        <input type="text" name="movingFrom" placeholder="Moving From" required>
+                    </div>
+                      <div class="input-box">
+                        <input type="text" name="movingTo" placeholder="Moving to" required>
+                    </div>
+                   <div class="input-box">
+                      <label for="dateTime">Preferred Date and Time</label><br>
+                      <input type="date" name="date" required>
+                      <input type="time" name="time" required>
+                    </div>
+
                     <div class="input-box">
                         <textarea name="message" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
+                    <!-- Inside your form container -->
+<div id="formMessage" class="form-message" style="display: none;"></div>
+
                   </form>
                 </section>
                 
@@ -65,7 +80,7 @@
 
 
             <!-- Map Section -->
-            <div class="map-container">
+            <div class="map-container" style="padding-top: 10%;">
                 <h3>Find Us Here</h3>
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26371649.738356553!2d96.8169624774657!3d-25.274398181618327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32bb82f0e21f69%3A0xfac1b735f19a8e0e!2sCockburn%20Central%20WA%206164%2C%20Australia!5e0!3m2!1sen!2sau!4v1709020193834!5m2!1sen!2sau"

@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let message = document.getElementById("message").value;
 
             // Simulate form submission
-            alert(`Thank you, ${name}! Your message has been sent.`);
+            // alert(`Thank you, ${name}! Your message has been sent.`);
 
             // Clear form fields
             contactForm.reset();
@@ -98,10 +98,31 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
   emailjs.sendForm('service_7qcgmog', 'template_o0xb7fe', this)
     .then(() => {
-      alert('Message sent successfully!');
+      // alert('Message sent successfully!');
       this.reset(); // clear form
     }, (error) => {
       alert('Failed to send message. Error: ' + JSON.stringify(error));
     });
 });
 
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Example: Simulate sending (replace with actual sending logic)
+    setTimeout(() => {
+        showFormMessage("Your message has been sent successfully. We'll get back to you soon!", "success");
+        document.getElementById("contactForm").reset();
+    }, 500);
+});
+
+function showFormMessage(message, type) {
+    const msgDiv = document.getElementById("formMessage");
+    msgDiv.textContent = message;
+    msgDiv.className = `form-message ${type}`;
+    msgDiv.style.display = "block";
+
+    // Optional: Auto-hide after 5 seconds
+    setTimeout(() => {
+        msgDiv.style.display = "none";
+    }, 15000);
+}
