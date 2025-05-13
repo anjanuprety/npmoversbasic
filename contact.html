@@ -60,11 +60,21 @@
                       <div class="input-box">
                         <input type="text" name="movingTo" placeholder="Moving To" required>
                     </div>
-                   <div class="input-box">
-                      <label for="dateTime">Preferred Date and Time</label><br>
-                      <input type="date" name="date" required placeholder="Date">
-                      <input type="time" name="time" required placeholder="Time">
-                    </div>
+                  <div class="input-box">
+                    <label for="date" style="font-size: 16px; font-weight: 500; color: #333;">
+                      <i class="fa fa-calendar" style="margin-right: 6px; font-size: 16px; color: #333;"></i>
+                      Preferred Date
+                    </label>
+                    <input type="date" name="date" id="date" required>
+                  </div>
+
+                  <div class="input-box">
+                    <label for="time" style="font-size: 16px; font-weight: 500; color: #333;">
+                      <i class="fa fa-clock" style="margin-right: 6px; font-size: 16px; color: #333;"></i>
+                      Preferred Time
+                    </label>
+                    <input type="time" name="time" id="time" required>
+                  </div>
 
                     <div class="input-box">
                         <textarea name="message" placeholder="Your Message" required></textarea>
